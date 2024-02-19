@@ -30,7 +30,12 @@ class MeetingSchedule(Document):
 			return
 
 		CRLF = "\r\n"
-		default_sender_name, default_sender =frappe.db.get_value('Email Account',{'default_outgoing':1},['name','email_id'])
+		default_sender_info = frappe.db.get_value('Email Account',{'default_outgoing':1},['name','email_id'])
+
+		if default_sender_info is None:
+			frappe.throw("No default outgoing Email Account found.")
+		else:
+			default_sender_name, default_sender = default_sender_info
 		
 		if not default_sender:
 			frappe.throw("Please Setup Default Outgoing Email Account.")

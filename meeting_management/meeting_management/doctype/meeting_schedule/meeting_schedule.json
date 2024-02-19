@@ -179,7 +179,7 @@
  ],
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2023-03-16 07:26:07.858131",
+ "modified": "2024-02-19 21:49:05.855517",
  "modified_by": "Administrator",
  "module": "Meeting Management",
  "name": "Meeting Schedule",
@@ -200,7 +200,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
